@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: url('Now here.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.mainheader  {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainheader .logo img{
+    width: 250px;
+    height: 200px;
+    padding-left: 60px;
+}
+
+.mainheader nav {
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.mainheader nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: mediumturquoise;
+}
+.mainheader .btn{
+    margin-right: 60px;
+    visibility: hidden;
+}
+
+.mainheader button{
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+    border-radius: 10px;
+}
+
+
+.login-form{
+    width: 450px;
+    height: 500px;
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: black 2px solid;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.login-form h1{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.login-form p{
+    font-size: 20px;
+    margin: 15px 0;
+    margin-left: 10px;
+}
+
+.login-form input{
+    padding: 10px;
+    border-radius: 3px;
+    
+}
+
+#two a{
+    font-size: 15px;
+}
+
+#one{
+    font-size: 15px;
+}
+
+.login-form button{
+    margin-top: 10px;
+    padding: 10px;
+    width: 185px;
+    border-radius: 5px;
+}
+
+
+#name{
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 300px;
+}
+
+
+
+#email{
+    margin-left: 50px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+#pass{
+    margin-left: 50px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+#number{
+    margin-left: 50px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+#age{
+    margin-left: 50px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+#register{
+    margin-left: 110px;
+    width: 200px;
+    font-weight: bold;
+    margin-top: 30px;
+}

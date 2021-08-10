@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='EMR.css') }}">
+    <script src="https://kit.fontawesome.com/204ac6021f.js" crossorigin="anonymous"></script>
+    <title>Doctor Profile</title>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="mainheader">
+            <nav>
+                <a href="{{ url_for('after_login') }}">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>  
+                <a href="{{ url_for('home') }}">Logout</a>
+                <a href="{{ url_for('drdetails') }}">Update</a>
+            </nav>
+        </div>
+    
+        <p>Date<br>19/06/2021</p>
+    </div>
+    <div class="emr">
+       <div class="patient">
+           <h2><i class="fas fa-user"></i> Doctor Information</h2>
+           <div class="media">
+                <img class="rounded-circle account-img" src="{{ image_file }}">
+                <div class="media-body">
+                    <h2 class="account-heading">{{ current_user.username }}</h2>
+                    <p class="text-secondary">{{ current_user.email }}</p>
+                </div>
+            </div>
+            <div class="login-form">
+                <div class="style" style="margin-top: 10px;">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div style="margin-top: 10px;" class="'alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}<!---for protection-->
+                        <div class="form-group" style="margin-top: 10px;">
+                            <input id="username" type="text" name="username" placeholder="username" style="margin-top: 10px; padding: 5px; width: 250px;">
+                            {% if form.username.errors %}
+                                <div class="invalid-feedback" style="margin-top: 10px;">
+                                    {% for error in form.username.errors %}
+                                        <span style="margin-top: 10px;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group" style="margin-top: 10px;">
+                            {{ form.picture.label() }}
+                            {{ form.picture(class="form-control-file") }} 
+                            {% if form.picture.errors %}
+                                {% for error in form.picture.errors %}<br>
+                                <span class="text-danger" style="margin-top: 10px;">{{ error }}</span></br>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    <button type="submit" style="margin-top: 10px; padding: 5px; width: 100px; background: lightblue; border-radius: 4px;"> Update </button>
+                </form>
+            </div>
+           <!--<img src="https://www1.chester.ac.uk/sites/default/files/styles/extra_large/public/John%20Smith%20web.jpg?itok=OvkegTat" alt="">-->
+           <br>
+           
+           <br>
+           <div class="person"style="font-weight: bold;">Phone Number<div style="font-weight: normal;">{{ current_user.phnumber }}</div></div>
+           
+           <br>
+           <div class="person"  style="font-weight: bold;">Degree<div style="font-weight: normal;">{{ current_user.degree }}</div></div>
+
+       </div>
+       <div class="medical">
+          <div class="m1">
+            <h2><i class="fas fa-notes-medical"></i> Medical Qualification</h2>
+            <div class="cold" style="font-weight: bold;">Degree<div style="font-weight: normal;">{{ current_user.degree }}</div></div>
+            
+            <div class="cold" style="font-weight: bold;">Specialization<div style="font-weight: normal;">{{ current_user.specialization }}</div></div>
+            <div class="healthy">
+                <div class="h1">
+                <h2><i class="fas fa-file-medical"></i> Treatment History </h2>
+                <div class="health1" style="font-weight: bold;">Treated Patients <div style="font-weight: normal;">{{ current_user.treatedp }}</div>
+                </div>  
+            </div>  
+        </div>
+          
+    </div>
+    
+</body>
+</html>

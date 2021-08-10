@@ -1,0 +1,10 @@
+req = db.Table('req', 
+    db.Column('uid', db.Integer, db.ForeignKey('user.id')),
+    db.Column('did', db.Integer, db.ForeignKey('doctor.id'))
+    )
+
+send = db.relationship('Doctor', secondary=req, backref=db.backref('request', lazy='dynamic'))
+
+@login_manager.user_loader
+def load_user(user_id):
+    return Doctor.query.get(int(user_id))

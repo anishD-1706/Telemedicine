@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Register.css') }}">
+    </head>
+    <body>
+        <div class="mainheader">
+            <div class="logo">
+                <img src="../static/Doc_logo.jpg">
+            </div>
+            <nav>
+                <a href="{{ url_for('homeM') }}">मुख्यपृष्ठ</a>
+                <a href="">संपर्क</a>
+                <a href="">सेवा</a>
+                <a href="">बद्दल</a> 
+            </nav>
+            <div class="btn">
+                <button>  मदत  </button>
+            </div>
+        </div>
+         <div class="login-form">
+             <h1> नोंदणी करा </h1>
+             <form action="#" method="post">
+              <input type="text" id="name" name="Name" placeholder="आपले नांव लिहा">
+               <input type="text" id="surname" name="text" placeholder="आपले आडनाव प्रविष्ट करा">
+               <br>
+                <input type="email" id="email" placeholder="
+                तुमचा ईमेल टाका">
+                <br>
+                <input type="password" id="pass" placeholder="पासवर्ड टाका">
+                <br>
+                <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">नर</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">स्त्री</label>
+                    <br>
+                    <input type="number" id="number" placeholder="
+                    मोबाइल नंबर टाका ">
+                    <br>
+                    <input type="number" id="age" placeholder="वय प्रविष्ट करा">
+                    <br>
+                <button type="submit" id="register"> नोंदणी करा </button>
+             </form>
+
+         </div>
+    </body>
+</html>

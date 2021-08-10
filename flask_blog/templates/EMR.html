@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='EMR.css') }}">
+    <script src="https://kit.fontawesome.com/204ac6021f.js" crossorigin="anonymous"></script>
+    <title>EMR Record</title>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="mainheader">
+            <nav>
+                <a href="{{ url_for('after_login') }}">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>  
+                <a href="{{ url_for('home') }}">Logout</a>
+                <a href="{{ url_for('details') }}">Update</a>
+
+            </nav>
+        </div>
+    
+        <p>Date<br>19/06/2021</p>
+    </div>
+    <div class="emr">
+       <div class="patient">
+           <h2><i class="fas fa-user"></i> Patient Information</h2>
+           <div class="media">
+                <img class="rounded-circle account-img " src="{{ image_file }}">
+                <div class="media-body">
+                    <h2 class="account-heading" style="margin-top: 20px;">{{ current_user.username }}</h2>
+                    <p class="text-secondary" style="margin-top: 10px;">{{ current_user.email }}</p>
+                </div>
+            </div>
+            <div class="login-form">
+                <div class="style" style="margin-top: 10px;">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div style="margin-top: 10px;" class="'alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}<!---for protection-->
+                        <div class="form-group" style="margin-top: 10px;">
+                            <input id="username" type="text" name="username" placeholder="username" style="margin-top: 10px; padding: 5px; width: 250px;">
+                            {% if form.username.errors %}
+                                <div class="invalid-feedback" style="margin-top: 10px;">
+                                    {% for error in form.username.errors %}
+                                        <span style="margin-top: 10px;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group" style="margin-top: 10px;">
+                            {{ form.picture.label() }}
+                            {{ form.picture(class="form-control-file") }} 
+                            {% if form.picture.errors %}
+                                {% for error in form.picture.errors %}<br>
+                                <span class="text-danger" style="margin-top: 10px;">{{ error }}</span></br>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    <button type="submit" style="margin-top: 10px; padding: 5px; width: 100px; background: lightblue; border-radius: 4px;"> Update </button>
+                </form>
+            </div>
+           <!--<img src="https://www1.chester.ac.uk/sites/default/files/styles/extra_large/public/John%20Smith%20web.jpg?itok=OvkegTat" alt="">-->
+           <br>
+           <div class="person" style="font-weight: bold; margin-left: 0px;">Gender<div style="font-weight: normal;">{{ current_user.gender }}</div></div>
+           
+           <br>
+           <div class="person"style="font-weight: bold; margin-left: 0px;">Phone Number<div style="font-weight: normal;">{{ current_user.phnumber }}</div></div>
+           
+           <br>
+           <div class="person"  style="font-weight: bold; margin-left: 0px;">Age<div style="font-weight: normal;">{{ current_user.age }}</div></div>
+           
+           <br>
+           <div class="person" style="font-weight: bold; margin-left: 0px;">Height(cm's)<div style="font-weight: normal;">{{ current_user.height }}</div></div>
+           
+
+
+       </div>
+       <div class="medical">
+          <div class="m1">
+            <h2><i class="fas fa-notes-medical"></i> Medical Record</h2>
+            <div class="cold" style="font-weight: bold;">Medical Diagnosis <div style="font-weight: normal;">{{ current_user.mproblem }}</div></div>
+            
+            <div class="cold" style="font-weight: bold;">Blood Group<div style="font-weight: normal;">{{ current_user.bpgroup }}</div></div>
+            <div class="cold" style="font-weight: bold;">Blood Pressure Level<div style="font-weight: normal;">{{ current_user.bplvl }}</div></div>
+            <div class="healthy">
+                <div class="h1">
+                <h2><i class="fas fa-file-medical"></i> Healthy & Unhealthy Habits</h2>
+                <div class="health1" style="font-weight: bold;">Exercise <div style="font-weight: normal;">1-2 days</div></div>
+                
+                <div class="health1" style="font-weight: bold;">Eating following a diet<div style="font-weight: normal;">I have a strict diet</div></div>
+                </div>
+                <div class="h2">
+                    <div class="health" style="font-weight: bold;">Caffeine Consumption<div style="font-weight: normal;">I don't use caffeine</div></div>
+                    <div class="health" style="font-weight: bold;">Do you smoke?<div style="font-weight: normal;">No</div></div>
+                    </div>
+                    <div class="h3">
+
+                        <div class="health" style="font-weight: bold;">Alcohol Consumption<div style="font-weight: normal;">No</div></div>
+                        <div class="health" style="font-weight: bold;"><div style="font-weight: normal;"></div></div>
+                        </div>
+                
+            </div>  
+        </div>
+          <div class="m2">
+            <div style="font-weight: bold;">Weight(kg's) <div style="font-weight: normal;">60</div></div>
+            <br>
+            <div style="font-weight: bold;">Diabeties<div style="font-weight: normal;">No</div>
+          </div>
+          </div>
+          <div class="m3">
+              <div style="font-weight: bold;">Medical Problems<div style="font-weight: normal;">{{ current_user.mproblem }}</div></div></div></div>
+              <br>
+             
+            </div>
+       </div>
+    </div>
+    
+</body>
+</html>

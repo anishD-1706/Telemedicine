@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='login2.css') }}">
+    </head>
+    <body>
+        <div class="mainheader">
+            <div class="logo">
+                    <img src="../static/Doc_logo.jpg">
+            </div>
+            <nav>
+                <a href="{{ url_for('homeH') }}">मुख्यपृष्ठ</a>
+                <a href="">संपर्क</a>
+                <a href="">सेवा</a>
+                <a href="">बद्दल</a>   
+            </nav>
+            <div class="btn">
+                <button> मदत </button>
+            </div>
+        </div>
+         <div class="login-form">
+            <h1> लॉगिन फॉर्म </h1>
+            <div class="style">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="'alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+            
+             <form action="#" method="post">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    <input id="email" type="text" name="email" placeholder="ईमेल">
+                    {% if form.email.errors %}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <input id="password" type="password" name="password" placeholder="पासवर्ड">
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                <br>
+                <p id="two"><a href="">संकेतशब्द विसरलात?</a></p>
+                <button type="submit"> लॉगिन </button>
+                <p id="one"> सदस्य नाही? <a href="{{ url_for('registerM') }}"> नोंदणी करा</a></p>
+             </form>
+
+         </div>
+    </body>
+</html>

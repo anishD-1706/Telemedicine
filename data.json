@@ -1,0 +1,139 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you Later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting.Take care.",
+        "Have a nice day , take care of your loved ones.",
+        "Bye! Wishing a speedy recovery."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "covid",
+      "patterns": [
+        "I want information about covid",
+        "please tell about covid",
+        "covid"
+      ],
+      "responses": [
+        "Coronaviruses are a family of viruses that can cause respiratory illness in humans. They get their name,corona, from the many crown-like spikes on the surface of the virus.Some common symptoms that have been specifically linked to COVID-19 include:shortness of breath,a cough that gets more severe over time,fever,chills,fatigue.Stopping the spread starts with you ,Wear a mask,Clean your hands,Maintain safe distance,Get vaccinated."
+      ]
+    },
+    {
+      "tag": "doctor",
+      "patterns": [
+        "Can I get any doctor's no.to contact ?",
+        "Can I call you ?",
+        "What are the doctor's helpline numbers?",
+        "I want information over call" ,
+        "Please give me mobile no.",
+        "I want to talk to doctors"
+      ],
+      "responses": [
+        "Here are our Doctors Helpline Numbers: 88896754 , 6767587.You can contact them."
+      ]
+    },
+    {
+      "tag": "disease",
+      "patterns": [
+        "I want some information about my disease.",
+        "I have a disease.",
+        "Please tell me how to cure my disease."
+      ],
+      "responses": [
+        "Don't worry.Just tell me what are the symptoms you are experiencing.",
+        "You will be fine. Tell me the symptoms. I will help you."
+      ]
+    },
+    {
+      "tag": "fever",
+      "patterns": [
+        "I am having fever.",
+        "Suggest me some medicines for curing fever.",
+        "fever"
+      ],
+      "responses": [
+        "A fever is a temporary increase in your body temperature, often due to an illness. Having a fever is a sign that something out of the ordinary is going on in your body.Fevers generally go away within a few days. A number of over-the-counter medications lower a fever such as acetaminophen (Tylenol, others) , paracetamol or ibuprofen (Advil, Motrin IB, others). Use these medications according to the label instructions or as recommended by your doctor.Seek immediate medical attention if any of these signs or symptoms accompanies a fever:
+         1)Severe headache
+         2)Unusual skin rash, especially if the rash rapidly worsens
+         3)Unusual sensitivity to bright light
+         4)Stiff neck and pain when you bend your head forward
+         5)Mental confusion
+         6)Persistent vomiting
+         7)Difficulty breathing or chest pain
+         8)Abdominal pain or pain when urinating
+         9)Convulsions or seizures
+         10)Still If you have doubts , consult from our doctors : 66754 , 4375"
+      ]
+    },
+    {
+      "tag": "throat",
+      "patterns": [
+        "I am having sore throat.",
+        "Suggest me some medicines for curing sore throat.",
+        "sore throat"
+      ],
+      "responses": [
+        "A sore throat is pain, scratchiness or irritation of the throat that often worsens when you swallow. The most common cause of a sore throat is a viral infection, such as a cold or the flu. A sore throat caused by a virus resolves on its own.You can treat most sore throats at home.Get plenty of rest to give your immune system a chance to fight the infection.To relieve the pain of a sore throat:1)Gargle with a mixture of warm water and 1/2 to 1 teaspoon of salt.2)Drink warm liquids that feel soothing to the throat, such as hot tea with honey, soup broth, or warm water with lemon.3) Herbal teas are especially soothing to a sore throat.4)Cool your throat by eating a cold treat like a popsicle or ice cream.Suck on a piece of hard candy or a lozenge.5)Turn on a cool mist humidifier to add moisture to the air.Call us on 88856 if you have any of these potentially more serious symptoms:
+         1)severe sore throat
+         2)trouble swallowing
+         3)trouble breathing, or pain when you breathe
+         4)difficulty opening your mouth
+         5)sore joints
+         6)a fever higher than 101 degrees Fahrenheit (38 degrees Celsius)
+         7)painful or stiff neck
+         8)earache
+         9)blood in your saliva or phlegm
+         10)a sore throat that lasts for more than a week"
+      ]
+    },
+    {
+      "tag": "appointment",
+      "patterns": [
+        "How to book an appointment or get consultation from you after taking primary aid?",
+        "How to fix appointment with doctors?",
+        "I want to fix appointment",
+        "how to fix appointmemt",
+        "I want to book an appointment",
+        "appointment"
+      ],
+      "responses": [
+        "Just go to doctors profile and check the option for book appointment slot , timings and take the appointment accordingly."
+      ]
+    },
+    {
+      "tag": "use",
+      "patterns": [
+        "I dont know how to use this",
+        "I am confused how to proceed with this website",
+        "Please tell me the directions to use this website"
+      ],
+      "responses": [
+        "Dont worry.I will help you.On this website,you can see information about various diseases as well as if you are suffering from a disease , I will guide you how you can take primary aid.If your have severe disease , you can call our doctors and get cured.Still if you have doubts , dont hesitate to call on this number 98456 :)"
+      ]
+    }
+  ]
+}

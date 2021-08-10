@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Register.css') }}">
+    </head>
+    <body>
+        <div class="mainheader">
+            <div class="logo">
+                <img src="../static/Doc_logo.jpg">
+            </div>
+            <nav>
+                <a href="{{ url_for('homeM') }}">Home</a>
+                <a href="">Contact</a>
+                <a href="">Services</a>
+                <a href="">About</a>   
+            </nav>
+            <div class="btn">
+                <button> HelpLine </button>
+            </div>
+        </div>
+        
+        <div class="login-form">
+            <h2><i class="fas fa-notes-medical"></i> Medical Record</h2>
+            <div class="style">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="'alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}<!---for protection-->
+                    <div class="form-group">
+                        <input id="phnumber" type="number" name="phnumber" placeholder="फोन नंबर +91">
+                        {% if form.phnumber.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.phnumber.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <input id="gender" type="text" name="gender" placeholder="लिंग">
+                        {% if form.gender.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.gender.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <input id="age" type="text" name="age" placeholder="वय">
+                        {% if form.age.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.age.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <input id="height" type="text" name="height" placeholder="उंची (मिमी)">
+                        {% if form.height.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.height.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        <input id="bpgroup" type="text" name="bpgroup" placeholder="रक्त गट">
+                        {% if form.bpgroup.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.bpgroup.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <input id="bplvl" type="text" name="bplvl" placeholder="रक्तदाब पातळी">
+                        {% if form.bplvl.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.bplvl.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <input id="oxylvl" type="text" name="oxylvl" placeholder="रक्त ऑक्सिजन पातळी">
+                        {% if form.oxylvl.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.oxylvl.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <input id="mproblem" type="text" name="mproblem" placeholder="वैद्यकीय समस्या">
+                        {% if form.mproblem.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.mproblem.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                <button type="submit"> Submit details </button>
+            </form>
+        </div>
+    </body>
+</html>

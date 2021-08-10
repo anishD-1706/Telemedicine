@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/204ac6021f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style1.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="mainheader">
+                <div class="logo">
+                      <img src="../static/Doc_logo.jpg">
+                </div>
+                <nav>
+                    <a href="#">मुख्यपृष्ठ</a>
+                    <a href="#contact">संपर्क</a>
+                    <a href="#">सेवा</a>
+                    <a href="#">बद्दल</a>   
+                </nav>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        भाषा निवडा
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="{{ url_for('home') }}">English</a>
+                      <a class="dropdown-item" href="{{ url_for('homeH') }}">Hindi</a>
+                      <a class="dropdown-item" href="#">Marathi</a>
+                    </div>
+                  </div>
+                <div class="btn">
+                    <button> मदत </button>
+                </div>
+            </div>
+
+            <main>
+                <section class="left">
+                    <p id="one"> आत रहा, सुरक्षित राहा<p>
+                    <h2> आम्ही आपल्या काळजीसाठी येथे आहोत</h2>
+                    <h2> आम्ही सर्वोत्तम डॉक्टर आहेत</h2>
+                    <p id="two"> 24/7 काळजी उपलब्ध आहे</p>
+                    <button><a href="{{ url_for('loginM') }}">लॉगिन </a></button>
+                    <button><a href="{{ url_for('dlogin') }}">डॉक्टर लॉगिन</a></button>
+                </section>
+            </main>
+
+            
+        </header>
+        <div class="Main">
+            <div class="images">
+              <div class="IMG">
+                <div class="imgone"><img src="https://tiimg.tistatic.com/fp/1/006/395/paracetamol-tablets-500-mg-515.jpg" alt=""></div>
+                <div class="imgtwo"><img src="https://i-cf65ch.gskstatic.com/content/dam/cf-consumer-healthcare/panadol/en_in/adult/productshots/crocinadvance/455x455.jpg?auto=format" alt=""></div>
+                <div class="imgthree"><img src="https://newassets.apollo247.com/pub/media/catalog/product/b/e/ben0053.jpg" alt=""></div>
+                <div class="imgfour"><img src="https://5.imimg.com/data5/RF/JI/KY/SELLER-516157/platorich-dengue-fever-tablet-500x500.jpeg" alt=""></div>
+               </div>
+                <div class="IMGO">
+                 <div class="imgfive"><img src="https://www.electral.co.in/images/products/reconstitution-powder.png" alt=""></div>
+                 <div class="imgsix"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/78/Strepsils.jpg/1280px-Strepsils.jpg" alt=""></div>
+                 <div class="imgseven"><img src="https://www.netmeds.com/images/product-v1/600x600/45285/calpol_500mg_tablet_15_s_0.jpg" alt=""></div>
+                 <div class="imgeight"><img src="https://www.kroger.com/product/images/large/front/0030045048102" alt=""></div>
+                </div>
+              </div>
+              <div class="para">
+                <h3>गोळ्या</h3>
+                <p>“जेव्हा शक्य असेल तेव्हा नेहमी हसत राहा, हे स्वस्त औषध आहे.”</p>
+              </div>
+            </div>
+              <section class="mainsix">
+                <p class="hola">आपल्याला उत्कृष्ट काळजीसाठी उत्कृष्ट डॉक्टर प्रदान करणे</p>
+                <div class="blog">
+                    <div class="blog1">
+                      <div class="B1">
+                        <img src="https://debatechamber.com/wp-content/uploads/2017/02/bigstock-Portrait-of-a-friendly-female-26984102-2-238x300.jpg" alt="study">
+                      </div>
+                      <h4>डॉ. अमेलिया खान</h4>
+                      <h6>हड्डी रोग विशेषज्ञ</h6>
+                      <div class="paragraph">
+                          
+                          <button><a href="{{ url_for('dp1') }}" style="text-decoration: none;">View More</a></button>
+                      </div>
+                    </div>
+                    <div class="blog2">
+                      <div class="B1">
+                        <img src="https://www.miraldental.com/wp-content/uploads/2018/12/doctor-img2.png" alt="study">
+                      </div>
+                      <h4>डॉ. अँटनी रॉबिन्स</h4>
+                      <h6>सलाहकार चिकित्सक</h6>
+                      
+                      <div class="paragraph">
+                        <button><a href="{{ url_for('dp2') }}" style="text-decoration: none;">View More</a></button>
+                      </div>
+                      
+                    </div>
+                    <div class="blog3">
+                      <div class="B1">
+                        <img src="https://telemedizin.one/wp-content/uploads/2019/12/doctor07.jpg" alt="study">
+                      </div>
+                      <h4>डॉ. अमेलिया राइट</h4>
+                      <h6>एंडोक्राइनोलॉजिस्ट</h6>
+                      
+                      <div class="paragraph">
+                        <button><a href="{{ url_for('dp3') }}" style="text-decoration: none;">View More</a></button>
+                      </div>
+                    </div>
+                  </div> 
+              </section>
+              
+               <div class="footer">
+                <div class="foot1">
+                  <i>संपर्क</i>
+                  <p>123-456-7890<br>
+                  Technonurturers@gmail.com<br></p>
+                  <button><a href="https://mail.google.com/">मेल पाठवा</a></button>
+                </div>
+                <div class="foot2">
+                  <i>तांत्रिक माहिती</i>
+                  <p>
+                    प्रमाणपत्रे<br>
+                    विद्यापीठे संलग्न<br>
+                    पदवी दिली</p>
+                </div>
+                <div class="foot3">
+                  <i>माहिती</i>
+                  <p>आमच्याबद्दल<br>
+                    दुवे<br>
+                  </p>
+                </div>
+                <div class="foot4">
+                  <i>विनामूल्य नोंदणी करा</i>
+                  <p>ईमेल वापरून नोंदणी करा किंवा लॉग इन करा किंवा लॉग इन तयार करण्यासाठी जा आणि सूचना पुनर्प्राप्त करण्यासाठी नव्याने नोंदणी करा.</p>
+                  <button><a href="{{ url_for('register') }}">नोंदणी करा</a></button>
+                </div>
+                <div class="foot5">
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-facebook-square"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

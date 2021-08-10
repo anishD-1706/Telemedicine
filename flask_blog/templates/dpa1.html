@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../static/profile.css">
+        <script src="https://kit.fontawesome.com/204ac6021f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="mainheader">
+            <div class="logo">
+                <img src="../static/Doc_logo.jpg">
+            </div>
+            <nav>
+                <a href="{{ url_for('after_login') }}">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#docters">Docters</a>
+                <a href="#">About</a>   
+            </nav>
+            
+            
+        </div>
+        <div class="main">
+            <div class="first">
+                <div class="image">
+                    <img src="https://debatechamber.com/wp-content/uploads/2017/02/bigstock-Portrait-of-a-friendly-female-26984102-2-238x300.jpg" alt="">
+                </div>
+                <div class="profile">
+                   <h1>{{ doc.username }} <br><h1 style="font-weight: lighter; font-size: 45px; color: rgb(68, 68, 68);" >Khan</h1> </h1>
+                   <p>{{ doc.specialization }} </p>
+                </div>
+             </div>
+             <div class="second">
+                <div class="pro">
+                   <h3>Profile</h3>
+                   <h2>{{ doc.f_name }} <br><p style="font-weight: lighter; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">Orthopedician</p></h2>
+                   <p id="p" style="font-weight: bold; font-size: 17px;">
+                    Medical Degrees<br>
+                    <p style="font-weight: normal;">{{ doc.degree }} </p>
+                   </p>
+                </div>
+                <div class="pr">
+                    <div class="pp">
+                        <p class="pp1">Experience</p>
+                        <p class="pp2">3 Years+</p>
+                    </div>
+                    <div class="pp">
+                        <p class="pp1">Languages</p>
+                        <p class="pp23">English,Hindi,Marathi</p>
+                    </div>
+                    <div class="pp">
+                        <p class="pp1">Types of</p>
+                        <p class="pp3">Surgeon</p>
+                    </div>
+                </div>
+                <div class="pr">
+                    <h3 style="text-transform:uppercase">Speciality</h3>
+                    <div class="pp">
+                        <button class="pp11" style= " border-radius: 20px;  margin-left: 0px; padding:5px; font-weight: normal;">Joints</button>
+                        <button class="pp31" style= " border-radius: 20px;  margin-left: 30px; padding:5px; ">Muscles</button>
+                    </div>
+                    <div class="pp">
+                        <button class="pp11" style= " border-radius: 20px;  margin-left: 0px; padding:5px; font-weight: normal;">Bones</button>
+                        <button class="pp31" style= " border-radius: 20px;  margin-left: 30px; padding:5px; ">Ligaments</button>
+                    </div>
+                </div>
+                <div class="address">
+                    <h1 style="font-size: 60px; margin-left: 50px;"><i class="fas fa-stethoscope" style="color:  rgb(4, 4, 110); font-size: 50px;"></i> Medicare</h1>
+                    <div class="ad1">
+                        <div class="add" style="font-size: 18px; margin-left: 50px;"> 
+                            {{ doc.email }} <br>{{ doc.phnumber }} 
+                    </div>
+                    <div class="add2">
+                        <button><a href="#" >Send Request</a></button>
+                        <button><a href="{{ url_for('chatbot') }}" >Consult Online</a></button>
+                    </div>
+                </div>
+                    
+                </div>
+             </div>
+        </div>
+      
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Telemediciene</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/204ac6021f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style1.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="mainheader">
+                <div class="logo">
+                     <img src="../static/Doc_logo.jpg">
+                </div>
+                <nav>
+                    <a href="">Home</a>
+                    <a href="#contact">Contact</a>
+                    <a href="">Services</a>
+                    <a href="">About</a>   
+                </nav>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Choose Language
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">English</a>
+                      <a class="dropdown-item" href="{{ url_for('homeH') }}">Hindi</a>
+                      <a class="dropdown-item" href="{{ url_for('homeM') }}">Marathi</a>
+                    </div>
+                  </div>
+                <div class="btn">
+                    <button> HelpLine </button>
+                </div>
+            </div>
+
+            <main>
+                <div class="media">
+                    <img class="rounded-circle account-img" src="{{ image_file }}">
+                    <div class="media-body">
+                        <h2 class="account-heading">{{ current_user.username }}</h2>
+                        <p class="text-secondary">{{ current_user.email }}</p>
+                    </div>
+                </div>
+
+                <div class="login-form">
+                    <h1>Update Profile</h1>
+                    <div class="style">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="'alert alert-{{ category }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <form method="POST" action="" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}<!---for protection-->
+                            <div class="form-group">
+                                <input id="username" type="text" name="username" placeholder="username">
+                                {% if form.username.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.username.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <input id="email" type="text" name="email" placeholder="Email id">
+                                {% if form.email.errors %}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.picture.label() }}
+                                {{ form.picture(class="form-control-file") }} 
+                                {% if form.picture.errors %}
+                                    {% for error in form.picture.errors %}
+                                    <span class="text-danger">{{ error }}</span></br>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        <button type="submit"> Update </button>
+                    </form>
+                </div>
+            </main>
+        </header>
+        
+

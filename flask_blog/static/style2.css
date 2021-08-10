@@ -1,0 +1,719 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1rem;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../static/Untitled\ design\ \(3\).png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.mainheader  {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainheader .logo img{
+    width: 25rem;
+    height: 20rem;
+    padding-left: 6rem;
+}
+
+.mainheader nav {
+    width: 45rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.mainheader nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav a:hover{
+    color: mediumturquoise;
+}
+.mainheader .btn{
+    margin-right: 6rem;
+}
+
+.mainheader button{
+    padding: 1rem 4.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    border: none;
+    background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+    border-radius: 1rem;
+}
+
+main{
+    width: 65rem;
+    height: 60rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 14rem;
+    
+}
+
+.left h1{
+    margin-left: 10px;
+    font-size: 4rem;
+}
+ 
+#one{
+    font-size: 3rem;
+    margin: 10px;
+    font-weight: normal;
+    
+}
+h2{
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    font-weight: unset;
+    font-size: 2rem;
+}
+
+#two{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+main .left button {
+    width: 15rem;
+    height: 7rem;
+    font-weight: bold;
+    background: #77b9b4;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+}
+
+.left button a{
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+    text-align: center;
+}
+
+p{
+    font-weight: bold;
+}
+
+main button:hover{
+    background: peachpuff;
+}
+
+.mainheader form{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #4fafa7;
+}
+    
+
+.mainsix{
+    background: url('../static/Now\ here\ \(1\).png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.mainsix .blog {
+    display: flex;
+    height: 50rem; 
+    margin-top: 70px;
+}
+.mainsix .blog .blog1{
+    width: 32rem;
+    height: 41rem;
+    box-shadow: 0px 3rem 3rem -1.8rem rgba(0, 0, 0, 1);
+    margin-top: 4rem;
+    margin-left: 20rem;
+    background: white;
+}
+.mainsix .blog .blog1 .B1 img {
+    width: 17rem;
+    height: 17rem;
+    padding: 1rem;
+    margin-top: 4rem;
+    border-radius: 17rem;
+    margin-left: 8.5rem;
+}
+
+.mainsix .blog .blog1 h4 {
+    font-weight: bolder;
+    color: rgb(8, 8, 143);
+    margin-left: 8rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.hola {
+    color: black;
+    margin-left: 40rem;
+    color: rgb(85, 85, 168);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    
+}
+
+.mainsix .blog .blog1  h6{
+    font-weight: bolder;
+    color: rgb(8, 8, 143);
+    margin-left: 11rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.mainsix .blog .blog2{
+    width: 42rem;
+    height: 51rem;
+    box-shadow: 0px 3rem 3rem -1.8rem rgba(0, 0, 0, 1);
+    margin-left: 3rem;
+    border-radius: .5rem;
+    background: white;
+
+}
+.mainsix .blog .blog2 .B1 img{
+    width: 22rem;
+    height: 22rem;
+    border-radius: 22rem;
+    margin-left: 11rem;
+    margin-top: 4rem;
+}
+.mainsix .blog .blog2  h4{
+    font-weight: bolder;
+    color: rgb(8, 8, 143);
+    margin-left: 9rem;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.mainsix .blog .blog2  h6{
+    font-weight: bolder;
+    color: rgb(8, 8, 143);
+    margin-left: 12rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.mainsix .blog .blog3{
+    width: 32rem;
+    height: 41rem;
+    box-shadow: 0px 3rem 3rem -1.8rem rgba(0, 0, 0, 1);
+    margin-top: 4rem;
+    margin-left: 3rem;
+    background: white;
+}
+
+.mainsix .blog .blog3 .B1 img{
+    width: 17rem;
+    height: 17rem;
+    padding: 1rem;
+    margin-top: 4rem;
+    border-radius: 17rem;
+    margin-left: 8.5rem;
+}
+
+.mainsix .blog .blog3  h4{
+    font-weight: bolder;
+    color: rgb(8, 8, 143);
+    margin-left: 8rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.mainsix .blog .blog3  h6{
+    font-weight: bolder;
+    color: rgb(8, 8, 143);
+    margin-left: 10rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.mainsix .blog .blog1 .paragraph button{
+    width:10rem;
+    padding: 1rem;
+    height: 4rem;
+    margin-top: 3rem;
+    margin-left: 10.5rem;
+    border-radius: 5px;
+    background: rgb(197, 225, 235);
+    font-weight: bold;
+    border: transparent;
+    font-size: 12px;
+}
+.mainsix .blog .blog2 .paragraph .one{
+    width:15rem;
+    padding: 1rem;
+    height: 4rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    background: rgb(197, 225, 235);
+    font-weight: bold;
+    border: transparent;
+    font-size: 12px;
+}
+.mainsix .blog .blog3 .paragraph .one{
+    width:15rem;
+    padding: 1rem;
+    height: 4rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    background: rgb(197, 225, 235);
+    font-weight: bold;
+    border: transparent;
+    font-size: 12px;
+}
+.mainsix .blog .blog2 .paragraph button{
+    width:14rem;
+    padding: 1rem;
+    height: 5rem;
+    margin-top: 3rem;
+    margin-left: 15rem;
+    border-radius: 5px;
+    background: rgb(197, 225, 235);
+    font-weight: bold;
+    border: transparent;
+    font-size: 17px;
+}
+.mainsix .blog .blog2 .paragraph .two{
+    width:16rem;
+    padding: 1rem;
+    height: 5rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    background: rgb(197, 225, 235);
+    font-weight: bold;
+    border: transparent;
+    font-size: 17px;
+}
+.mainsix .blog .blog3 .paragraph button{
+    width:10rem;
+    padding: 1rem;
+    height: 4rem;
+    margin-top: 3rem;
+    margin-left: 10.5rem;
+    border-radius: 5px;
+    background: rgb(197, 225, 235);
+    font-weight: bold;
+    border: transparent;
+    font-size: 12px;
+}
+.mainsix .blog .blog1 .paragraph .three3{
+    color: black;
+    font-size: 1.3rem;
+   }
+   .mainsix .blog .blog1 .paragraph .three3 .fa-quote-left{
+    margin-bottom: 1rem;
+    color:rgb(8, 8, 143); 
+   }
+   
+   .mainsix .blog .blog1 .paragraph .three3 .fa-quote-right{
+   margin-left: 21rem;
+   color:rgb(8, 8, 143); 
+   margin-top: 1rem;
+   }
+   .mainsix .blog .blog2 .paragraph .three3 .fa-quote-left{
+    margin-bottom: 1rem;
+    color:rgb(8, 8, 143); 
+   }
+   
+   .mainsix .blog .blog2 .paragraph .three3 .fa-quote-right{
+   margin-left: 26rem;
+   color:rgb(8, 8, 143); 
+   margin-top: 1rem;
+   }
+   
+
+.mainsix .blog .blog3 .paragraph .three3{
+ color: black;
+ font-size: 1.3rem;
+}
+.mainsix .blog .blog3 .paragraph .three3 .fa-quote-left{
+ margin-bottom: 1rem;
+ color:rgb(8, 8, 143); 
+}
+
+.mainsix .blog .blog3 .paragraph .three3 .fa-quote-right{
+margin-left: 21rem;
+color:rgb(8, 8, 143); 
+margin-top: 1rem;
+}
+
+ .Main{
+    display: flex;
+    height: 100vh; 
+
+    
+}
+
+ .Main .images{
+    width: 700px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 150px;
+ }
+
+ .Main .IMG{
+    display: flex;
+}
+
+ .Main .IMGO{
+    display: flex;
+}
+ .Main .imgone:hover{
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05, 1.05);
+  }
+   .Main .imgtwo:hover{
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05, 1.05);
+  }
+   .Main  .imgthree:hover{
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05, 1.05);
+  }
+ .Main .imgfour:hover{
+  box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05, 1.05);
+}
+ .Main .imgfive:hover{
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05, 1.05);
+  }
+   .Main .imgsix:hover{
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05, 1.05);
+  }
+   .Main  .imgseven:hover{
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05, 1.05);
+  }
+ .Main .imgeight:hover{
+  box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05, 1.05);
+}
+
+
+ .Main .images .imgone img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 50px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+
+
+ .Main .images .imgtwo img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 50px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+ .Main .images .imgthree img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 50px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+ .Main .images .imgfour img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 50px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+ .Main .images .imgfive img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+ .Main .images .imgsix img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+ .Main .images .imgseven img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+ .Main .images .imgeight img{
+    width: 180px;
+    height: 170px;
+    margin-left: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 30px 18px -18px rgba(0, 0, 0, 0.8);
+}
+
+.Main .para{
+    margin-left: 120px;
+    width: 400px;
+}
+
+.Main .para h3{
+    margin-top: 150px;
+    font-weight: bold;
+    color: black;
+    font-size: 35px;
+}
+
+.Main .para p{
+    margin-top: 40px;
+    color: rgb(116, 112, 112);
+    font-size: 20px;
+}
+
+.cont{
+    height: 70vh;  
+}
+
+.cont .C1{
+    display: flex;
+}
+.contact {
+    width: 500px;
+    height: 285px;
+    margin-left: 250px;  
+    box-shadow: 0px 3rem 3rem -1.8rem rgba(0, 0, 0, 1);
+    margin-top: 220px;
+   
+    border-radius: 5px;
+}
+
+.contact .hola1{
+    height: 60px;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.contact .hola1 h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contact .hola2{
+    height: 50px;
+    font-size: 17px;
+    margin-left: 45px;
+}
+.cont .form{
+    margin-left: 50px;
+    margin-top: 150px;
+}
+
+.cont .form #name{
+    width: 500px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.cont .form #email{
+    width: 250px;
+    padding: 7px;
+    margin-top: 10px;
+}
+.cont .form #number{
+    width: 247px;
+    padding: 7px;
+    margin-top: 10px;
+}
+
+.cont .form #text{
+    width: 500px;
+    height: 200px;
+    padding: 7px;
+    margin-top: 10px;
+}
+
+.cont .form button{
+    margin-top: 20px;
+    width: 130px;
+    padding: 9px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.footer{
+    display: flex;
+    margin-top: 150px;
+    background: rgb(196, 230, 241); 
+    height: 320px;
+    
+}
+
+.footer .foot1{
+    width: 200px;
+    height: 200px;
+    color: black;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+.footer .foot1 p{
+    margin-top: 20px;
+    color: rgb(75, 74, 74);
+    font-size: 15px;
+}
+.footer .foot1 i {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.footer .foot1 button{
+    margin-top: 7px;
+    background: rgb(196, 230, 241);
+    padding: 7px;
+    width: 120px;
+    color: rgb(196, 230, 241);
+    border: black solid 1px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.footer .foot2{
+    width: 200px;
+    height: 200px;
+    color: black;
+    margin-left: 40px;
+    margin-top: 80px;
+}
+.footer .foot2 p{
+    margin-top: 20px;
+    color: rgb(75, 74, 74);
+    font-size: 15px;
+}
+.footer .foot2 i{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.footer .foot2 button{
+    font-weight: bold;
+}
+
+
+
+.footer .foot3{
+    width: 100px;
+    height: 100px;
+    color: black;
+    margin-left: 30px;
+    margin-top: 80px;
+    
+}
+.footer .foot3 p{
+    margin-top: 20px;
+    color: rgb(75, 74, 74);
+    font-size: 15px;
+}
+.footer .foot3 i{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.footer .foot4{
+    width: 300px;
+    height: 100px;
+    color: black;
+    margin-left: 70px;
+    margin-top: 80px;
+    
+}
+
+.footer .foot4 p{
+    margin-top: 20px;
+    color: rgb(75, 74, 74);
+    font-size: 15px;
+}
+.footer .foot4 i{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.footer .foot4 button{
+    margin-top: 7px;
+    background: rgb(196, 230, 241);
+    padding: 7px;
+    width: 120px;
+    color: rgb(196, 230, 241);
+    border: black solid 1px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+.footer .foot4 button a{
+    color:black ;
+    text-decoration: none;
+}
+
+.footer .foot1 button a{
+    color:black;
+    text-decoration: none;
+}
+
+.footer .foot5{
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.footer .foot5 a .fab{
+    color: rgb(75, 74, 74);
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.footer .foot5 a .fab:hover{
+    color: black;
+}
+@media(max-width:998px)
+{
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:868px)
+{
+    html{
+        font-size: 45%;
+    }
+    .mainheader nav a{
+        visibility: hidden;
+    }
+    .mainheader button{
+        visibility: hidden;
+    }
+}
+
